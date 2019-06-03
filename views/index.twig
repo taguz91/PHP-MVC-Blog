@@ -1,0 +1,27 @@
+{% extends "layout.twig" %}
+
+
+{% block content %}
+  {% for p in posts %}
+    <div class="blog-post">
+      <h2>{{ p.titulo }}</h2>
+
+      <p>
+        Enero 1, 2019 Por:
+        <a href="#">Pimiento</a>
+      </p>
+
+      {% if p.img_url %}
+      <div class="blog-post-image">
+        <img src="{{ p.img_url }}" alt="">
+      </div>
+      {% endif %}
+
+      <div class="blog-post-content">
+        {{ p.contenido }}
+      </div>
+
+    </div>
+
+  {% endfor %}
+{% endblock %}

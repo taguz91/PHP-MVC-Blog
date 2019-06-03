@@ -1,0 +1,33 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+  <h2>Users</h2>
+
+  <p>
+    <a class="btn btn-primary"
+    href="{{'admin/users/create' | url }}">
+    Nuevo usuario</a>
+  </p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for u in users %}
+        <tr>
+          <td>{{ u.name }}</td>
+          <td>{{ u.email }}</td>
+          <td>Editar</td>
+          <td>Eliminar</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

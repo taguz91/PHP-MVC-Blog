@@ -1,0 +1,11 @@
+<div class="alert alert-danger">
+  <ul>
+    {% for entrada, mensajes in errores %}
+      {% for m in mensajes %}
+        <li>
+          {{ entrada }}: {{ m }}
+        </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</div>

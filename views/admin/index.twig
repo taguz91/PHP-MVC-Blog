@@ -1,0 +1,23 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+  <p>
+    Bienvenido {{ user.name }}!
+  </p>
+
+
+  <ul>
+    <li>
+      <a href="{{ 'admin/posts' | url }}">Administrar posts</a>
+    </li>
+
+    <li>
+      <a href="{{ 'admin/users' | url }}">Administrar users</a>
+    </li>
+
+    <li>
+      <a href="{{ 'auth/logout' | url }}">Salir</a>
+    </li>
+  </ul>
+{% endblock %}
